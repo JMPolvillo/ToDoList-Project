@@ -21,22 +21,22 @@ Public static void Menu {
         switch (choice) {
             case 1:
             AddTask(scanner);
-            break
+            break;
             case 2:
             DeleteTask(scanner);
-            break
+            break;
             case 3:
             ListTasks(scanner);
-            break
+            break;
             case 4:
             MarkTask(scanner);
-            break
+            break;
             case 5:
-            system.out.println("Exiting APP.")
+            system.out.println("Exiting APP.");
             scanner.close();
             return;
             default:
-            system.out.println("Invalid number. Enter a correct option.")
+            system.out.println("Invalid number. Enter a correct option.");
         }
    
     }
