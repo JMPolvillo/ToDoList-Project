@@ -34,7 +34,7 @@ public class TodoListApp {
 
         switch (choice) {
             case 1:
-            AddTask(scanner);
+            addTask(scanner);
             break;
             case 2:
             DeleteTask(scanner);
@@ -57,6 +57,13 @@ public class TodoListApp {
 
 
 }  
+
+public static void addTask(Scanner scanner) {
+    System.out.print("Enter the task description: ");
+    String taskDescription = scanner.nextLine();
+    todoList.add(taskDescription);
+    System.out.println("Task added: " + taskDescription);
+}
 
  public static void markTask(Scanner scanner) {
         listTasks();
