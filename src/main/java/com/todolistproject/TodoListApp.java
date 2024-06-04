@@ -65,6 +65,21 @@ public static void addTask(Scanner scanner) {
     System.out.println("Task added: " + taskDescription);
 }
 
+private static void ListTasks() {
+    System.out.println("Tasks List:");
+    for (int i = 0; i < tasks.length; i++) {
+        String status;
+        if (completed[i]) {
+            status = "[X]";
+        } else {
+            status = "[ ]";
+        }
+        if (tasks[i] != null) {
+            System.out.println((i + 1) + ". " + status + " " + tasks[i]);
+        }
+    }
+}
+
  public static void markTask(Scanner scanner) {
         listTasks();
         System.out.print("Enter the number of the task to mark as completed: ");
