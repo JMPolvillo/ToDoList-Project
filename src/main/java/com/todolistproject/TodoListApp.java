@@ -37,10 +37,10 @@ public class TodoListApp {
             addTask(scanner);
             break;
             case 2:
-            DeleteTask(scanner);
+            deleteTask(scanner);
             break;
             case 3:
-            ListTasks(scanner);
+            listTasks(scanner);
             break;
             case 4:
             markTask(scanner);
@@ -65,7 +65,21 @@ public static void addTask(Scanner scanner) {
     System.out.println("Task added: " + taskDescription);
 }
 
-private static void ListTasks() {
+public void deleteTask(){
+    System.out.println("Enter the task to be deleted");
+    String addTask = scanner.nextLine();
+    int index = scanner.nextInt() - 1;
+    for (int i = 0; i < tasks.length; i++) {
+        if (task [i].getTask()){
+        }
+        if (tasks[i] = null)
+        System.out.println("The to-do list has been successfully deleted");  
+    }else{
+        System.out.println("THE TASK WAS NOT FOUND");    
+}
+}
+
+private static void listTasks() {
     System.out.println("Tasks List:");
     for (int i = 0; i < tasks.length; i++) {
         String status;
