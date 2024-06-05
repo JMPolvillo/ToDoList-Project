@@ -66,7 +66,7 @@ public static void addTask(Scanner scanner) {
 
 public static void listTask() {
     System.out.println("Tasks List:");
-    for (int i = 0; i < tasks.length; i++) {
+    for (int i = 0; i < Tasks.length; i++) {
         String status;
         if (completed[i]) {
             status = "[X]";
@@ -74,7 +74,7 @@ public static void listTask() {
             status = "[ ]";
         }
         if (task[i] != null) {
-            System.out.println((i + 1) + ". " + status + " " + tasks[i]);
+            System.out.println((i + 1) + "." + status + " " + Tasks[i]);
         }
 
     }
@@ -105,8 +105,6 @@ public void deleteTask(){
          ,System.out.println("The to-do list has been successfully deleted");  
     }else{
         System.out.println("THE TASK WAS NOT FOUND");    
-    }
 
 }
-
 }
