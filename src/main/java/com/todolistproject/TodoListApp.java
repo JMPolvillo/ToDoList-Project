@@ -64,17 +64,17 @@ public static void addTask(Scanner scanner) {
     System.out.println("Task added: " + taskDescription);
 }
 
-public static void listTask() {
+public static void listTask(Scanner scanner) {
     System.out.println("Tasks List:");
-    for (int i = 0; i < Tasks.length; i++) {
+    for (int i = 0; i < task.size(); i++) {
         String status;
-        if (completed[i]) {
+        if (completed.get(i)) {
             status = "[X]";
         } else {
             status = "[ ]";
         }
-        if (task[i] != null) {
-            System.out.println((i + 1) + "." + status + " " + Tasks[i]);
+        if (task.get(i) != null) {
+            System.out.println((i + 1) + ". " + status + " " + task.get(i));
         }
 
     }
@@ -105,6 +105,8 @@ public void deleteTask(){
          ,System.out.println("The to-do list has been successfully deleted");  
     }else{
         System.out.println("THE TASK WAS NOT FOUND");    
+    }
 
 }
+
 }
