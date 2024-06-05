@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 
 public class TodoListApp {
-    private static ArrayList<String> todoList = new ArrayList<>();
-
+    private static ArrayList<String> task = new ArrayList<>();
+    private static ArrayList<Boolean> completed = new ArrayList<>();
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -21,9 +21,9 @@ public class TodoListApp {
     System.out.println("To Do List APP");
     System.out.println("--------------");
     System.out.println("1. Add Task ");
-    System.out.println("2. Delete Task ");
-    System.out.println("3. List Task ");
-    System.out.println("4. Mark Task as completed ");
+    System.out.println("2. List Task ");
+    System.out.println("3. Mark Task as completed ");
+    System.out.println("4. Delete Task ");
     System.out.println("5. Exit ");
     System.out.println("--------------");
     System.out.println("Select an option: ");
@@ -37,13 +37,13 @@ public class TodoListApp {
             addTask(scanner);
             break;
             case 2:
-            deleteTask(scanner);
+            listTask(scanner);
             break;
             case 3:
-            listTasks(scanner);
+            markTask(scanner);
             break;
             case 4:
-            markTask(scanner);
+            deleteTask(scanner);
             break;
             case 5:
             System.out.println("Exiting APP.");
@@ -55,31 +55,16 @@ public class TodoListApp {
    
     }
 
-
 }  
 
 public static void addTask(Scanner scanner) {
-    System.out.print("Enter the task description: ");
+    System.out.println("Enter the task description: ");
     String taskDescription = scanner.nextLine();
-    todoList.add(taskDescription);
+    task.add(taskDescription);
     System.out.println("Task added: " + taskDescription);
 }
 
-public void deleteTask(){
-    System.out.println("Enter the task to be deleted");
-    String addTask = scanner.nextLine();
-    int index = scanner.nextInt() - 1;
-    for (int i = 0; i < tasks.length; i++) {
-        if (task [i].getTask()){
-        }
-        if (tasks[i] = null)
-        System.out.println("The to-do list has been successfully deleted");  
-    }else{
-        System.out.println("THE TASK WAS NOT FOUND");    
-}
-}
-
-private static void listTasks() {
+public static void listTask() {
     System.out.println("Tasks List:");
     for (int i = 0; i < tasks.length; i++) {
         String status;
@@ -88,21 +73,40 @@ private static void listTasks() {
         } else {
             status = "[ ]";
         }
-        if (tasks[i] != null) {
+        if (task[i] != null) {
             System.out.println((i + 1) + ". " + status + " " + tasks[i]);
         }
+
     }
+
 }
 
  public static void markTask(Scanner scanner) {
-        listTasks();
+        listTask();
         System.out.print("Enter the number of the task to mark as completed: ");
         int index = scanner.nextInt() - 1;
-        if (index >= 0 && index < todoList.size()) {
-            String completedTask = todoList.get(index);
+        if (index >= 0 && index < task.size()) {
+            String completedTask = task.get(index);
             System.out.println("Task marked as completed: " + completedTask);
         } else {
             System.out.println("Invalid task number.");
         }
+
     }
+
+public void deleteTask(){
+    System.out.println("Enter th task to be deleted");
+    String addTask = scanner.nextLine();
+    int index = scanner.nextInt() - 1;
+    for (int i = 0; i < tasks.length; i++) {
+        if (task [i].getTask()){
+        }
+        if (tasks[i] = null)
+         ,System.out.println("The to-do list has been successfully deleted");  
+    }else{
+        System.out.println("THE TASK WAS NOT FOUND");    
+    }
+
+}
+
 }
