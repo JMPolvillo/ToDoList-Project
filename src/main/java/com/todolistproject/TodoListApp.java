@@ -102,7 +102,7 @@ public void deleteTask(){
         if (task [i].getTask()){
         }
         if (tasks[i] = null)
-         ,System.out.println("The to-do list has been successfully deleted");  
+         System.out.println("The to-do list has been successfully deleted");  
     }else{
         System.out.println("THE TASK WAS NOT FOUND");    
     }
