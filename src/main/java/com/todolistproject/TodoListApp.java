@@ -25,7 +25,7 @@ public class TodoListApp {
             System.out.print("Select an option: ");
    
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline left-over
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -54,7 +54,7 @@ public class TodoListApp {
         System.out.print("Enter the task description: ");
         String taskDescription = scanner.nextLine();
         tasks.add(taskDescription);
-        completed.add(false); // Mark the new task as not completed
+        completed.add(false);
         System.out.println("Task added: " + taskDescription);
     }
 
@@ -71,7 +71,7 @@ public class TodoListApp {
         System.out.print("Enter the number of the task to mark as completed: ");
         int index = scanner.nextInt() - 1;
         if (index >= 0 && index < tasks.size()) {
-            completed.set(index, true); // Mark the task as completed
+            completed.set(index, true);
             System.out.println("Task marked as completed: " + tasks.get(index));
         } else {
             System.out.println("Invalid task number.");
