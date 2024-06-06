@@ -14,7 +14,6 @@ public class TodoListApp {
         menu(scanner);
     }
 
-
     public static void menu(Scanner scanner) {
    
     while (true) {
